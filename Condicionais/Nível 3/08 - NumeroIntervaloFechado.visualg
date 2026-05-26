@@ -1,0 +1,37 @@
+algoritmo "NumeroIntervaloFechado"
+
+var
+  intervaloA, intervaloB, numero, auxiliar: real
+  pertence: logico
+inicio
+
+  escreva("Informe o valor do intervalo a: ")
+  leia(intervaloA)
+  escreval("a="intervaloA)
+
+  escreva("Informe o valor do intervalo b: ")
+  leia(intervaloB)
+  escreval("b="intervaloB)
+
+  escreva("Informe o número: ")
+  leia(numero)
+  escreval("n="numero)
+
+  se (intervaloA > intervaloB) entao
+    auxiliar <- intervaloB
+    intervaloB <- intervaloA
+    intervaloA <- auxiliar
+  fimse
+
+  pertence <- (numero <= intervaloB) e (numero >= intervaloA)
+  escreval()
+
+  se (pertence) entao
+    escreval("Pertence (intervalo[",intervaloA,",", intervaloB,"])" )
+
+  senao
+    escreval("Não pertence.")
+
+  fimse
+
+fimalgoritmo

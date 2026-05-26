@@ -1,0 +1,24 @@
+algoritmo "AlunoAprovado"
+
+var
+  nota1, nota2, notaMinima, media: real
+  aprovado: logico
+
+inicio
+
+  notaMinima <- 7
+
+  escreva("Insira a primeira nota: ")
+  leia(nota1)
+  escreval(nota1)
+
+  escreva("Insira a segunda nota: ")
+  leia(nota2)
+  escreval(nota2)
+
+  media <- (nota1 + nota2) / 2
+  aprovado <- media >= notaMinima
+
+  escreval("Aluno está aprovado? ", aprovado)
+
+fimalgoritmo

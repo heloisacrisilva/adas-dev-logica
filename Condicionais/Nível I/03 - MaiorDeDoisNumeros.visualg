@@ -1,0 +1,27 @@
+algoritmo "MaiorDeDoisNumeros"
+
+var
+  num1, num2: inteiro
+
+inicio
+
+  escreva("Digite o primeiro número: ")
+  leia(num1)
+  escreval(num1)
+
+  escreva("Digite o segundo número: ")
+  leia(num2)
+  escreval(num2)
+  escreval()
+
+  se (num1 = num2) entao
+    escreval("Númeoros inseridos são iguais.")
+  senao
+    se (num1 > num2) entao
+      escreval(num1, " é maior que ", num2)
+    senao
+      escreval(num2, " é maior que ", num1)
+    fimse
+  fimse
+
+fimalgoritmo

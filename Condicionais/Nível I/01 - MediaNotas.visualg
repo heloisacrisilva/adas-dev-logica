@@ -1,0 +1,32 @@
+algoritmo "MediaNotas"
+
+var
+  nota1, nota2: real
+  media: real
+  entradasValidas: logico
+
+inicio
+
+  escreva("Digite a sua primeira nota: ")
+  leia(nota1)
+  escreval(nota1)
+
+  escreva("Digite a sua segunda nota: ")
+  leia(nota2)
+  escreval(nota2)
+
+  entradasValidas <- (nota1 >= 0) e (nota2 >= 0) e (nota1  <= 10) e (nota2  <= 10)
+  escreval()
+
+  se (entradasValidas) entao
+    media <- (nota1 + nota2) / 2
+    se (media >= 7) entao
+      escreval("Aluno aprovado!")
+    senao
+      escreval("Aluno reprovado.")
+    fimse
+  senao
+    escreval("Entradas inválidas.")
+  fimse
+
+fimalgoritmo

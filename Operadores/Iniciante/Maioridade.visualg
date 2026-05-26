@@ -1,0 +1,21 @@
+algoritmo "Maioridade"
+
+var
+  idade: inteiro
+  maioridade: inteiro
+
+inicio
+
+  maioridade <- 18
+
+  escreva("Insira sua idade: ")
+  leia(idade)
+  escreval(idade)
+
+  se (idade >= maioridade) entao
+    escreval("Você já maior de idade!")
+  senao 
+      escreval("Você ainda é menor de idade.")
+  fimse
+
+fimalgoritmo

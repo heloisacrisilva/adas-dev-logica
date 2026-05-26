@@ -1,0 +1,51 @@
+algoritmo "CadastroEscola"
+
+var
+  nomeAluno: caracter
+  nota1, nota2, nota3, media: real
+  notasValidas: logico
+
+inicio
+
+  escreva("Informe seu nome: ")
+  leia(nomeAluno)
+  escreval(nomeAluno)
+
+  escreva("Insira a nota da primeira prova: ")
+  leia(nota1)
+  escreval(nota1)
+
+  escreva("Insira a nota da segunda prova: ")
+  leia(nota2)
+  escreval(nota2)
+
+  escreva("Insira a nota da terceira prova: ")
+  leia(nota3)
+  escreval(nota3)
+
+  media <- (nota1 + nota2 + nota3) / 3
+
+  notasValidas <- (nota1 >= 0 e (nota1 <= 10)) e (nota2 >= 0 e (nota2 <= 10)) e (nota3 >= 0 e (nota3 <= 10))
+
+  se (notasValidas) entao
+    se (media >= 7) entao
+      escreval()
+      escreval("Parabéns, aprovado!")
+    fimse
+
+    se ((media >= 5) e (media < 7)) entao
+      escreval()
+      escreval("Calma, recuperação!")
+    fimse
+
+    se (media < 5) entao
+      escreval()
+      escreval("Sinto muito, reprovado!")
+    fimse
+  senao
+    escreval()
+    escreval("Revise, nota(s) inválida(s)")
+  fimse
+
+
+fimalgoritmo

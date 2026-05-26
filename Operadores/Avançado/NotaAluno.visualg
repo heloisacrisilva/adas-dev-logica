@@ -1,0 +1,32 @@
+algoritmo "NotaAluno"
+
+var
+  nota1, nota2: real
+  media: real
+inicio
+
+
+  escreva("Insira sua primeira nota: ")
+  leia(nota1)
+  escreval(nota1)
+
+  escreva("Insira sua segunda nota: ")
+  leia(nota2)
+  escreval(nota2)
+  
+  media <- nota1 + nota2 / 2
+
+  se (media < 4) entao
+    escreval()
+    escreva("Sinto muito, está reprovado.")
+  senao
+    se (media > 4) e (media < 7) entao
+      escreval()
+      escreva("Você ficou de recuperação.")
+    senao
+      escreval()
+      escreval("Parabéns, está aprovado!")
+    fimse
+  fimse
+
+fimalgoritmo

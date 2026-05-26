@@ -1,0 +1,38 @@
+algoritmo "UsuarioESenha"
+
+var
+  usuario, senha, usuarioCorreto, senhaCorreta: caracter
+  acessoPermitido, acessoNegado: logico
+
+inicio
+
+  usuarioCorreto <- "aluno"
+  senhaCorreta <- "1234"
+
+  escreva("Digite o usuário: ")
+  leia(usuario)
+  escreval(usuario)
+
+  escreva("Digite sua senha: ")
+  leia(senha)
+  escreval(senha)
+  escreval()
+
+  acessoPermitido <- (senha = senhaCorreta) e (usuario = usuarioCorreto)
+  acessoNegado <- (senha <> senhaCorreta) e (usuario <> usuarioCorreto)
+
+  se (acessoPermitido) entao
+    escreval("Acesso permitido!")
+  senao
+    se (acessoNegado) entao
+      escreval("Acesso negado.")
+    senao
+      se (senha <> senhaCorreta) entao
+        escreval("Senha incorreta.")
+      senao
+        escreval("Usuário incorreto.")
+      fimse
+    fimse
+  fimse
+
+fimalgoritmo

@@ -1,0 +1,31 @@
+algoritmo "ConsumoEnergia"
+
+var
+  consumoDia, totalConsumo, media: real
+  dia: inteiro
+inicio
+
+  consumoDia <- 0
+  totalConsumo <- 0
+  dia <- 1
+
+  enquanto dia <= 30 faca
+    escreva("Insira o consumo do dia ", dia, ": ")
+    leia(consumoDia)
+    escreval(consumoDia)
+
+    dia <- dia + 1
+    totalConsumo <- totalConsumo + consumoDia
+
+    se (totalConsumo >= 500 ) entao
+      escreval("Entrou em faixa alta!!!")
+    fimse
+  fimenquanto
+
+  media <- totalConsumo / dia
+
+  escreval()
+  escreval("Consumo total: ", totalConsumo)
+  escreval("Média diária: ", media)
+
+fimalgoritmo

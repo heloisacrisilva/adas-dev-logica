@@ -1,0 +1,27 @@
+algoritmo "HorárioVálido"
+
+var
+  hora: inteiro
+  minutos: real
+  valido: logico
+
+inicio
+
+  escreva("Informe a hora: ")
+  leia(hora)
+  escreval(hora)
+
+  escreva("Informe os minutos: ")
+  leia(minutos)
+  escreval(minutos)
+  escreval()
+
+  valido <- (hora <= 23) e (hora >= 0) e (minutos <= 59) e (minutos >= 0)
+
+  se (valido) entao
+    escreval("Horário válido!")
+  senao
+    escreval("Horário inválido...")
+  fimse
+
+fimalgoritmo

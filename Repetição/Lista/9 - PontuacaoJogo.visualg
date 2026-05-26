@@ -1,0 +1,34 @@
+algoritmo "PontuacaoJogo"
+
+var
+  fase, pontos, totalPontos: inteiro
+  venceu: logico
+inicio
+
+  fase <- 1
+  totalPontos <- 0
+  pontos <- 0
+
+  enquanto (fase <= 10) e (venceu = falso) faca
+    escreva("Insira sua pontuação na fase ", fase, ": ")
+    leia(pontos)
+    escreval(pontos)
+    fase <- fase + 1
+
+    totalPontos <- totalPontos + pontos
+
+    se totalPontos >= 1000 entao
+      venceu <- verdadeiro
+    fimse
+  fimenquanto
+
+  escreval()
+  escreval("Pontuação final: ", totalPontos)
+  se (venceu) entao
+    escreval("Parabéns, vencedor!")
+  senao
+    escreval("Oops, não foi dessa vez...")
+  fimse
+
+
+fimalgoritmo

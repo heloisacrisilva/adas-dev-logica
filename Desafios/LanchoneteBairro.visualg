@@ -1,0 +1,28 @@
+algoritmo "LanchoneteBairro"
+
+var
+  nomeCliente: caracter
+  valorLanche, valorBebida: real
+  totalPedido: real
+
+inicio
+
+  escreva("Informe seu nome: ")
+  leia(nomeCliente)
+  escreval(nomeCliente)
+
+  escreva("Insira o valor do seu lanche: ")
+  leia(valorLanche)
+  escreval(valorLanche)
+
+  escreva("Insira o valor da sua bebida: ")
+  leia(valorBebida)
+  escreval(valorBebida)
+
+  totalPedido <- valorBebida + valorLanche
+
+  escreval()
+  escreval("Cliente ", nomeCliente, ", o valor total do seu pedido foi: R$", totalPedido)
+
+
+fimalgoritmo

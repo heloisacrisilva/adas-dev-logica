@@ -1,0 +1,39 @@
+algoritmo "IMCFaixa"
+
+var
+  altura, peso, imc: real
+
+inicio
+
+  escreva("Insira sua altura: ")
+  leia(altura)
+  escreval(altura)
+
+  escreva("Insira seu peso: ")
+  leia(peso)
+  escreval(peso)
+
+  se ((altura < 0) ou ( peso < 0)) entao
+    escreval()
+    escreval("Entradas inválidas, valores precisam ser positivos.")
+
+  senao
+    imc <- peso / (altura * 2)
+    se (imc < 18.5) entao
+      escreval("Você está abaixo do peso.")
+    fimse
+
+    se ((imc >= 18.5) e (imc <= 24.9)) entao
+      escreval("Seu peso está dentro da normalidade.")
+    fimse
+
+    se ((imc >= 25) e (imc <= 29.9)) entao
+      escreval("Você está com sobrepeso.")
+    fimse
+
+    se (imc > 30) entao
+      escreval("Você está obeso(a).")
+    fimse
+  fimse
+
+fimalgoritmo

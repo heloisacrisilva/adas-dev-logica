@@ -1,0 +1,22 @@
+algoritmo "ValorAbsoluto"
+
+var
+  numeroReal, valorAbsoluto: real
+
+inicio
+
+  escreva("Insira um número: ")
+  leia(numeroReal)
+  escreval(numeroReal)
+
+
+
+  se (numeroReal < 0) entao
+    valorAbsoluto <- numeroReal * -1
+    escreval("Valor absoluto: ",valorAbsoluto)
+  senao
+    escreval("Número real mantido: ",numeroReal)
+  fimse
+
+
+fimalgoritmo

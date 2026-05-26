@@ -1,0 +1,52 @@
+algoritmo "CaixaEletronico"
+
+var
+
+  valorSaque: real
+  valido: logico
+  nota100,nota50,nota20,nota10,nota5: inteiro
+
+inicio
+
+  escreva("Insira o valor de saque: R$")
+  leia(valorSaque)
+  escreval(valorSaque)
+  escreval()
+
+  valido <- ((valorSaque MOD 5) = 0) e (valorSaque >= 0)
+
+  //Pesquisei e usei o DIV pois utilizando apenas o Se ficaria um código longo e repetitivo, a não ser se feito com Enquanto
+
+  se (valido) entao
+    se (valorSaque >= 100) entao
+      nota100 <- valorSaque DIV 100
+      valorSaque <- valorSaque MOD 100
+    fimse
+    se (valorSaque >= 50) entao
+      nota50 <- valorSaque DIV 50
+      valorSaque <- valorSaque MOD 50
+    fimse
+    se (valorSaque >= 20) entao
+      nota20 <- valorSaque DIV 20
+      valorSaque <- valorSaque MOD 20
+    fimse
+    se (valorSaque >= 10) entao
+      nota10 <- valorSaque DIV 10
+      valorSaque <- valorSaque MOD 10
+    fimse
+    se (valorSaque >= 5) entao
+      nota5 <- valorSaque DIV 5
+      valorSaque <- valorSaque MOD 5
+    fimse
+
+    escreva(nota100, "x 100; ")
+    escreva(nota50, "x 50; ")
+    escreva(nota20, "x 20; ")
+    escreva(nota10, "x 10; ")
+    escreva(nota5, "x 5; ")
+  senao
+    escreval("Erro: valor inválido para saque.")
+  fimse
+
+fimalgoritmo
+

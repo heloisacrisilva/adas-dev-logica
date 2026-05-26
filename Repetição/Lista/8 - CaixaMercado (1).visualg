@@ -1,0 +1,43 @@
+algoritmo "CaixaMercado"
+
+var
+  valorProdut, totalCompra, totalFatur: real
+  contCliente: inteiro
+  entradValid: logico
+  proxCliente: caracter
+
+inicio
+
+  contCliente <- 0
+  proxCliente <- "S"
+
+  enquanto proxCliente = "S" faca
+    totalFatur <- 0
+    entradValid <- verdadeiro
+    enquanto entradValid = verdadeiro faca
+
+      escreva("Insira o valor do produto: R$")
+      leia(valorProdut)
+      escreval(valorProdut)
+
+      se (valorProdut = 0) entao
+        entradValid <- falso
+      senao
+        totalCompra <- totalCompra + valorProdut
+      fimse
+    fimenquanto
+
+    contCliente <- contCliente + 1
+    totalFatur <- totalFatur + totalCompra
+
+    escreva("Continuar para o próximo cliente? (S/N): ")
+    leia(proxCliente)
+    escreval(proxCliente)
+
+  fimenquanto
+
+  escreval()
+  escreval("Total faturado: R$", totalFatur)
+  escreval("Clientes atendidos: ", contCliente)
+
+fimalgoritmo

@@ -1,0 +1,40 @@
+algoritmo "ClassifiqueNúmeros"
+
+var
+  numero: real
+  resto: real
+  numeroPar: logico
+
+inicio
+
+  escreva("Digite um número: ")
+  leia(numero)
+  escreval(numero)
+
+  resto <- numero MOD 2
+  numeroPar <- resto = 0
+
+
+  se (numero >= 0) entao
+    se (numeroPar) entao
+      escreval()
+      escreval(numero, " é par e positivo.")
+
+    senao
+      escreval()
+      escreval(numero, " é ímpar e positivo.")
+    fimse
+  fimse
+
+  se (numero < 0) entao
+    se (numeroPar = falso) entao
+      escreval()
+      escreval(numero, " é ímpar e negativo.")
+
+    senao
+      escreval()
+      escreval(numero, " é par e negativo.")
+    fimse
+  fimse
+
+fimalgoritmo

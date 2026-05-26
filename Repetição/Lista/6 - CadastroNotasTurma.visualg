@@ -1,0 +1,48 @@
+algoritmo "CadastroNotasTurma"
+
+var
+  nota, notasTurma, media, maiorNot, menorNot: real
+  i: inteiro
+inicio
+
+  notasTurma <- 0
+  media <- 0
+  i <- 0
+
+  enquanto nota <> -1 faca
+    escreva("Informe a nota do aluno ", i + 1, ": ")
+    leia(nota)
+    escreval(nota)
+
+    se (nota >= 0 e nota <= 10) entao
+      i <- i + 1
+      notasTurma <- notasTurma + nota
+
+      se (i = 1) entao
+        maiorNot <- nota
+        menorNot <- nota
+      senao
+        se (nota > maiorNot) entao
+          maiorNot <- nota
+        fimse
+        se (nota < menorNot) entao
+          menorNot <- nota
+        fimse
+      fimse
+    senao
+      se (nota <> -1) entao
+        escreval("Nota inválida, tente novamente.")
+        escreval()
+      senao
+        escreval("Finalizando...")
+        escreval()
+      fimse
+    fimse
+  fimenquanto
+  media <- notasTurma / i
+
+  escreval("Média da turma: ",media )
+  escreval("Maior nota: ", maiorNot )
+  escreval("Menor nota: ", menorNot )
+
+fimalgoritmo

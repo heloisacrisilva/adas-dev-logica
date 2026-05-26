@@ -1,0 +1,29 @@
+algoritmo "AreaRetangulo"
+
+var
+  base, altura, area: real
+  valida: logico
+
+inicio
+
+  escreva("Informa a base do retângulo: ")
+  leia(base)
+  escreval(base)
+
+  escreva("Informa a altura do retângulo: ")
+  leia(altura)
+  escreval(altura)
+  escreval()
+
+  valida <- (base ou altura) >= 0
+
+  se (valida) entao
+    area <- base * altura
+    escreval("Área: ",area )
+
+  senao
+    escreval("Erro: medidas inválidas.")
+  fimse
+
+
+fimalgoritmo

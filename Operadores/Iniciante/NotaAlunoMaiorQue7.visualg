@@ -1,0 +1,20 @@
+algoritmo "NotaAlunoMaiorQue7"
+
+var
+  nota: real
+  minimo: real
+  maiorQueOMinimo: logico
+
+inicio
+
+  minimo <- 7
+
+  escreva("Insira sua nota: ")
+  leia(nota)
+  escreval(nota)
+
+  maiorQueOMinimo <- nota >= minimo
+
+  escreval("Aluno atingiu a nota mínima? " + maiorQueOMinimo)
+
+fimalgoritmo

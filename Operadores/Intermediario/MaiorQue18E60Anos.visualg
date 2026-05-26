@@ -1,0 +1,20 @@
+algoritmo "MaiorQue18E60Anos"
+
+var
+  idade, maioridade, senioridade: inteiro
+  maiorQue18E60: logico
+
+inicio
+
+  maioridade <- 18
+  senioridade <- 60
+
+  escreva("Insira a sua idade: ")
+  leia(idade)
+  escreval(idade)
+
+  maiorQue18E60 <- (idade >= 18) e (idade <= 60)
+
+  escreval("É maior de idade e tem menos de 60 anos? " + maiorQue18E60)
+
+fimalgoritmo

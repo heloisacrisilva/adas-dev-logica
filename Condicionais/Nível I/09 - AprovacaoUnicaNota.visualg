@@ -1,0 +1,30 @@
+algoritmo "AprovacaoUnicaNota"
+
+var
+  nota: real
+  valida: logico
+
+inicio
+
+  escreva("Informa a nota da prova: ")
+  leia(nota)
+  escreval(nota)
+  escreval()
+
+  valida <- (nota >= 0) e (nota <= 10)
+
+
+  se (valida) entao
+    se (nota >= 7) entao
+      escreval("Aprovado!")
+    senao
+      escreval("Reprovado.")
+
+    fimse
+
+  senao
+    escreval("Nota inválida.")
+
+  fimse
+
+fimalgoritmo

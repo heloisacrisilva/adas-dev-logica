@@ -1,0 +1,37 @@
+algoritmo "BonusSalarial"
+
+var
+  salario: real
+  tempoEmpresaMeses: real
+  minSalario, minTempo, maxSalario: inteiro
+  bonus: real
+inicio
+  maxSalario <- 12000
+  minSalario <- 2000
+  minTempo <- 12
+  bonus <- 0.1
+
+
+  escreva("Insira seu salário bruto: ")
+  leia(salario)
+  escreval(salario)
+
+  escreva("Insira seu tempo de casa (em meses): ")
+  leia(tempoEmpresaMeses)
+  escreval(tempoEmpresaMeses)
+
+  se (salario >= maxSalario) entao
+    escreval()
+    escreva("Sinto muito, seu salário não permite mais bonus.")
+  senao
+    se (salario < minSalario) ou (tempoEmpresaMeses < minTempo) entao
+      escreval()
+      escreva("Sinto muito, não é válido para bonus salarial")
+    senao
+      escreval()
+      escreva("Parabéns, você tem direito ao bonus de: ", salario * bonus)
+    fimse
+  fimse
+
+
+fimalgoritmo

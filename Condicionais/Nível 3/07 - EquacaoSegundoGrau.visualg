@@ -1,0 +1,48 @@
+algoritmo "EquacaoSegundoGrau"
+
+var
+  a, b, c, delta, x: real
+inicio
+
+  escreva("Insira o valor da variável a: ")
+  leia(a)
+  escreval(a)
+
+  escreva("Insira o valor da variável b: ")
+  leia(b)
+  escreval(b)
+
+  escreva("Insira o valor da variável c: ")
+  leia(c)
+  escreval(c)
+
+  se (a = 0) entao
+    // Equação do primeiro grau
+    se (b = 0) entao
+
+      se (c = 0) entao
+        escreval("Infinitas solucoes")
+      senao
+        escreval("Nenhuma solucao")
+      fimse
+    senao
+      x <- -c / b
+      escreval("x = ", x)
+    fimse
+  senao
+
+    // Equação do segundo grau
+    delta <- b * b - 4 * a * c
+
+    se (delta < 0) entao
+      escreval("Nao ha raiz real")
+    senao
+      se (delta = 0) entao
+        escreval("Uma raiz real")
+      senao
+        escreval("Duas raizes reais distintas")
+      fimse
+    fimse
+  fimse
+
+fimalgoritmo

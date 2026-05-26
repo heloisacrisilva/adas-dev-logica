@@ -1,0 +1,17 @@
+algoritmo "MaiorQueCem"
+
+var
+  numero: real
+  maiorQueCem: logico
+
+inicio
+
+  escreva("Insira um número: ")
+  leia(numero)
+  escreval(numero)
+
+  maiorQueCem <- numero > 100
+  escreval("O número inserido é maior que 100? " + maiorQueCem)
+
+
+fimalgoritmo

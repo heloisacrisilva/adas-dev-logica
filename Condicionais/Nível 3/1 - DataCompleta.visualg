@@ -1,0 +1,51 @@
+algoritmo "DataCompleta"
+
+var
+
+  dia, mes, ano: inteiro
+  bissexto, valido: logico
+
+inicio
+
+  escreva("Informe o dia: ")
+  leia(dia)
+  escreval(dia)
+
+  escreva("Informe o mês: ")
+  leia(mes)
+  escreval(mes)
+
+  escreva("Informe o ano: ")
+  leia(ano)
+  escreval(ano)
+  escreval()
+
+  se ((ano MOD 400 = 0) ou ((ano MOD 4 = 0) e (ano MOD 100 <> 0))) entao
+    bissexto <- verdadeiro
+  senao
+    bissexto <- falso
+  fimse
+
+  se ((mes = 1) ou (mes = 3) ou (mes = 5) ou (mes = 7) ou
+  (mes = 8) ou (mes = 10) ou (mes = 12)) entao
+  valido <- dia <= 31
+  senao
+    se ((mes = 4) ou (mes = 6) ou (mes = 9) ou (mes = 11)) entao
+      valido <- dia <= 30
+    fimse
+    se (mes = 2) entao
+      se (bissexto) entao
+      valido <- dia <= 29
+      senao
+        valido <- dia <= 28
+      fimse
+    fimse
+  fimse
+
+  se (valido) entao
+    escreval("Data válida")
+  senao
+    escreval("Data inválida")
+  fimse
+
+fimalgoritmo

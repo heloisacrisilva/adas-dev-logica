@@ -1,0 +1,53 @@
+algoritmo "CalculadoraAcumulativa"
+
+var
+
+  operador, i: inteiro
+  num1, num2, resultado: real
+  continuar: caracter
+
+inicio
+
+  enquanto continuar <> "N" faca
+    escreva("Digite o primero número para operação: ")
+    leia(num1)
+    escreval(num1)
+
+    escreva("Digite o segundo número para operação: ")
+    leia(num2)
+    escreval(num2)
+
+    escreval()
+    escreval("Escolha um operador: ")
+    escreval("[1] - Soma")
+    escreval("[2] - Subtração")
+    escreval("[3] - Multiplicação")
+    escreval("[4] - Divisão")
+    leia(operador)
+
+    se (operador >= 1 e operador <= 4) entao
+
+      escolha (operador)
+        caso 1
+          resultado <- num1 + num2
+        caso 2
+          resultado <- num1 - num2
+        caso 3
+          resultado <- num1 * num2
+        caso 4
+          resultado <- num1 / num2
+      fimescolha
+
+      limpatela
+      escreval("Resultado da operação: ", resultado)
+      escreval()
+    senao
+      escreval("Operador inválido.")
+    fimse
+    escreva("Deseja continuar? (S/N): ")
+    leia(continuar)
+    escreval(continuar)
+
+  fimenquanto
+
+fimalgoritmo

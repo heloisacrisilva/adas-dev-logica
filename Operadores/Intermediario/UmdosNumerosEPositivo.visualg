@@ -1,0 +1,21 @@
+algoritmo "UmdosNumerosEPositivo"
+
+var
+  numero1, numero2: real
+  ePositivo: logico
+
+inicio
+
+  escreva("Digite o primeiro número: ")
+  leia(numero1)
+  escreval(numero1)
+
+  escreva("Digite o segundo número: ")
+  leia(numero2)
+  escreval(numero2)
+
+  ePositivo <- (numero1 >= 0) ou (numero2 >= 0)
+
+  escreval("Um dos números é positivo? " + ePositivo)
+
+fimalgoritmo

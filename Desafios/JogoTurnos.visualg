@@ -1,0 +1,151 @@
+algoritmo "JogoTurnos"
+
+var
+  jogador, vidaJogador, vidaInimigo, acao, turno: inteiro
+  defesa, escape: logico
+  danoBasico, danoEspecial, vida: inteiro
+
+inicio
+
+  vidaInimigo <- 500
+  defesa <- falso
+  escape <- falso
+  turno <- 1
+
+  escreval("**** Escolha seu personagem ****")
+  escreval("[1] - Guerreira")
+  escreval("[2] - Maga")
+  leia(jogador)
+
+  escolha jogador
+    caso 1
+      vidaJogador <- 400
+      danoBasico <- 25
+      danoEspecial <- 40
+      vida <- 20
+    caso 2
+      vidaJogador <- 250
+      danoBasico <- 15
+      danoEspecial <- 50
+      vida <- 30
+    outrocaso
+      escreval("Opção inválida.")
+  fimescolha
+
+
+  enquanto (vidaJogador <> 0) ou (vidaInimigo <> 0) faca
+    escreval()
+    escreval("-----------------------")
+    escreval("TURNO ", turno)
+    escreval("-----------------------")
+
+    escreval()
+    escreval("Inimigo")
+    escreval("Vida: ", vidaInimigo, "/500")
+
+    escreval()
+    escolha(jogador)
+      caso 1
+        escreval("Guerreira")
+        escreval("Vida: ", vidaJogador, "/400")
+      caso 2
+        escreval("Maga")
+        escreval("Vida: ", vidaJogador, "/250")
+    fimescolha
+
+    escreval()
+    escreval("---- Menu de ações ----")
+    escreval("[1] - Ataque Básico (", danoBasico," de dano)")
+    escreval("[2] - Defender (reduz dano pela metade)")
+    escreval("[3] - Recuperar Vida (+", vida," de vida)")
+    escreval("[4] - Ataque Epecial (", danoEspecial, " de dano)")
+    escreval("[5] - Escapar")
+    leia(acao)
+    limpatela
+
+    escolha acao
+      caso 1
+        escreval("Jogador usou ATAQUE BÁSICO!")
+        se (jogador = 1) entao
+          vidaInimigo <- vidaInimigo - danoBasico
+          escreval("Inimigo recebeu ", danoBasico, " de dano")
+        senao
+          vidaInimigo <- vidaInimigo - danoBasico
+          escreval("Inimigo recebeu ", danoBasico, " de dano")
+        fimse
+      caso 2
+        escreval("Jogador usou DEFESA!")
+        defesa <- verdadeiro
+      caso 3
+        escreval("Jogador usou RECUPERAR VIDA!")
+        se (jogador = 1) entao
+          vidaJogador <- vidaJogador + vida
+          se (vidaJogador > 400) entao
+            vidaJogador <- 400
+          fimse
+          escreval("Jogador ganhou ", vida, " DE VIDA!")
+          escreval("Vida atual: ", vidaJogador, "/400")
+        senao
+          vidaJogador <- vidaJogador + vida
+          se (vidaJogador > 250) entao
+            vidaJogador <- 250
+          fimse
+          escreval("Jogador ganhou ", vida, " DE VIDA")
+          escreval("Vida atual: ", vidaJogador, "/250")
+        fimse
+      caso 4
+        escreval("Jogador usou ATAQUE ESPECIAL!")
+        se (jogador = 1) entao
+          vidaInimigo <- vidaInimigo - danoEspecial
+          escreval("Inimigo recebeu ", danoEspecial, " de dano")
+        senao
+          vidaInimigo <- vidaInimigo - danoEspecial
+          escreval("Inimigo recebeu ", danoEspecial, " de dano")
+        fimse
+      caso 5
+        se (vidaInimigo <= 500 / 2) entao
+          escreval("Jogador usou ESCAPAR!")
+          escape <- verdadeiro
+        senao
+          escreval("Oops, não é possível usar essa ação no momento.")
+        fimse
+    fimescolha
+
+    escreval()
+    escreval("Inimigo")
+    escreval("Vida: ", vidaInimigo, "/500")
+
+    se (escape <> verdadeiro) entao
+    escolha turno
+      caso 5 ou 10
+        escreval("Inimigo usou MAGIA!")
+        vidaJogador <- vidaJogador - 100
+        escreval("Jogador recebeu 100 de dano!")
+      caso 4 ou 8
+        escreval("Inimigo usou RECUPERAR VIDA!")
+        vidaInimigo <- vidaInimigo + 150
+        se (vidaInimigo > 500) entao
+          vidaInimigo <- 500
+        fimse
+        escreval("Inimifo ganhou +150 DE VIDA")
+        escreval("Vida atual inimigo: ", vidaInimigo, "/500")
+      outrocaso
+        escreval("Inimigo usou ATAQUE PADRAO!")
+        vidaJogador <- vidaJogador - 40
+        escreval("Jogador recebeu 40 de dano!")
+    fimescolha
+    
+    senao
+      escreval("JOGADOR ESCAPOU!")
+    fimse
+    turno <- turno + 1
+  fimenquanto
+
+  se (vidaInimigo = 0) entao
+    escreval("Parabéns! Você derrotou o inimigo.")
+  senao
+    escreval("Poxa! Você foi derrotado...")
+    escreval("Game over.")
+  fimse
+
+fimalgoritmo

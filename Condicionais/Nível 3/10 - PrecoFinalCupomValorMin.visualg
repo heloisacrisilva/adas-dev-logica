@@ -1,0 +1,45 @@
+algoritmo "PrecoFinalCupomValorMin"
+
+var
+  precoBase: real
+  codCupom: inteiro
+
+inicio
+  escreva("Informe o preço do(s) produto(s): R$")
+  leia(precoBase)
+  escreval(precoBase)
+
+  escreva("Insira o código do cupom, se tiver: ")
+  leia(codCupom)
+  escreval(codCupom)
+  escreval()
+
+  se (precoBase >= 0) entao
+    se ((codCupom >= 0) e (codCupom <= 2)) entao
+      se (codCupom = 1) entao
+        se (precoBase >= 50) entao
+          precoBase <- precoBase - (precoBase * 0.1)
+        senao
+          escreval("Cupom não aplicável para essa compra.")
+          precoBase <- precoBase
+        fimse
+      senao
+        se (codCupom = 2) entao
+          se (precoBase >= 100) entao
+            precoBase <- precoBase - (precoBase * 0.15)
+          senao
+            escreval("Cupom não aplicável para essa compra.")
+            precoBase <- precoBase
+          fimse
+        fimse
+      fimse
+    senao
+      escreval("Cupom inválido")
+    fimse
+    escreval("Valor final: R$", precoBase)
+  senao
+    escreval("Valor inválido.")
+  fimse
+
+
+fimalgoritmo

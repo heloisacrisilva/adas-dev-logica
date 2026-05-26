@@ -1,0 +1,39 @@
+algoritmo "NumerosCondicionais"
+
+var
+  num1, num2: inteiro
+  zero: logico
+
+inicio
+
+  escreva("Digite o primeiro número: ")
+  leia(num1)
+  escreval(num1)
+
+  escreva("Digite o segundo número: ")
+  leia(num2)
+  escreval(num2)
+
+  se ((num1 = 0) e (num2 = 0)) entao
+    escreval()
+    escreva("Ambos são zero")
+  senao
+    se (num1 = num2) entao
+      escreval()
+      escreval("Os dois números são iguais!")
+    senao
+      se (num1 > num2) entao
+        escreval()
+        escreval(num1, " é maior que ", num2)
+      senao
+        escreval()
+        escreval(num2, " é maior que ", num1)
+      fimse
+    fimse
+  fimse
+
+
+
+
+
+fimalgoritmo

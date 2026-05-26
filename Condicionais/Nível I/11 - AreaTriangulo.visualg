@@ -1,0 +1,29 @@
+algoritmo "AreaTriangulo"
+
+var
+  base, altura, area: real
+  valida: logico
+
+inicio
+
+  escreva("Informa a base do triângulo: ")
+  leia(base)
+  escreval(base)
+
+  escreva("Informa a altura do triângulo: ")
+  leia(altura)
+  escreval(altura)
+  escreval()
+
+  valida <- (base e altura) >= 0
+
+  se (valida) entao
+    area <- (base * altura) / 2
+    escreval("Área: ",area )
+
+  senao
+    escreval("Erro: medidas inválidas.")
+  fimse
+
+
+fimalgoritmo

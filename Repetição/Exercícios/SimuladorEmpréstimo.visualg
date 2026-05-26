@@ -1,0 +1,37 @@
+algoritmo "SimuladorEmpréstimo"
+
+var
+  salario, salarioMin: real
+  valorParcela: real
+
+inicio
+  salarioMin <- 2000
+
+  escreva("Informe seu salário: ")
+  leia(salario)
+  escreval(salario)
+
+  escreva("Insira o valor da parcela: ")
+  leia(valorParcela)
+  escreval(valorParcela)
+  escreval()
+
+  se (salario < salarioMin) entao
+    escreval("Negado, não atinge o salário mínimo.")
+  senao
+    se ((salario >= salarioMin) e (salario <= 5000)) entao
+      se (valorParcela <= (salario * 0.3)) entao
+        escreval("Aprovado!")
+      senao
+        escreval("Negado, parcela compromete mais de 30% do seu salário...")
+      fimse
+    senao
+      se (valorParcela <= (salario * 0.4)) entao
+        escreval("Aprovado!")
+      senao
+        escreval("Negado, parcela compromete mais de 40% do seu salário...")
+      fimse
+    fimse
+  fimse
+
+fimalgoritmo

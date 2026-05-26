@@ -1,0 +1,25 @@
+algoritmo "AumentoSalarialFaixa"
+
+var
+
+  salarioAtual, novoSalario: real
+  aumento: real
+
+inicio
+
+  escreva("Informe seu salário atual: R$")
+  leia(salarioAtual)
+  escreval(salarioAtual)
+
+  se (salarioAtual <= 1500) entao
+    aumento <- 0.12
+  senao
+    aumento <- 0.07
+  fimse
+
+  novoSalario <- salarioAtual + (salarioAtual * aumento)
+  escreval()
+  escreval("Novo salário: R$",novoSalario )
+
+
+fimalgoritmo

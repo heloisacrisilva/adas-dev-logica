@@ -1,0 +1,54 @@
+algoritmo "NumeroMaior"
+
+var
+  numero1,numero2,numero3: real
+inicio
+
+  escreva("Insira o primeiro número: ")
+  leia(numero1)
+  escreval(numero1)
+
+  escreva("Insira o segundo número: ")
+  leia(numero2)
+  escreval(numero2)
+
+  escreva("Insira o terceiro número: ")
+  leia(numero3)
+  escreval(numero3)
+
+  //todos iguais
+  se (numero1 = numero2) e (numero2 = numero3) entao
+    escreval()
+    escreval("Parece que todos os números são iguais.")
+  senao
+    //dois numeros iguais e maiorais
+    se (numero1 = numero2) e (numero1 > numero3) entao
+      escreval()
+      escreval("O primeiro e o segundo número são os maiores!")
+    senao
+      se (numero1 = numero3) e (numero1 > numero2) entao
+        escreval()
+        escreval("O primeiro e o terceiro número são os maiores!")
+      senao
+        se (numero2 = numero3) e (numero2 > numero1) entao
+          escreval()
+          escreval("O segundo e o terceiro número são os maiores!")
+        senao
+          //apenas um numero maioral
+          se (numero1 > numero2) e (numero1 > numero3) entao
+            escreval()
+            escreval("O primeiro número é o maior!")
+          senao
+            se (numero2 > numero1) e (numero2 > numero3) entao
+              escreval()
+              escreval("O segundo número é o maior!")
+            senao
+              escreval()
+              escreval("O terceiro número é o maior!")
+            fimse
+          fimse
+        fimse
+      fimse
+    fimse
+  fimse
+fimalgoritmo

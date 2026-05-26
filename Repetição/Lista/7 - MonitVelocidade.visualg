@@ -1,0 +1,48 @@
+algoritmo "MonitVelocidade"
+
+var
+  veloc, classific, total: inteiro
+  countLeve,countMedia,countGrave: inteiro
+inicio
+
+  countLeve <- 0
+  countMedia <- 0
+  countGrave <- 0
+  veloc <- 1
+  total <- 0
+
+  enquanto veloc <> 0 faca
+    escreva("Informe a velocidade registrada: ")
+    leia(veloc)
+    escreval(veloc)
+    escreval()
+
+    se (veloc > 0) entao
+      total <- total + 1
+      escreval("---- Classifique a multa infrigida ----")
+      escreval("[1] - Leve")
+      escreval("[2] - Média")
+      escreval("[3] - Grave")
+      leia(classific)
+      escreval()
+      escolha (classific)
+        caso 1
+          countLeve <- countLeve + 1
+        caso 2
+          countMedia <- countMedia + 1
+        caso 3
+          countGrave <- countGrave + 1
+        outrocaso
+          escreval("Opção inválida.")
+      fimescolha
+    fimse
+  fimenquanto
+
+  escreval()
+  escreval("**** Resumo das multas ****")
+  escreval("Total de multas registradas: ", total)
+  escreval("Classificação leve: ", countLeve)
+  escreval("Classificação média: ", countMedia)
+  escreval("Classificação grave: ", countGrave)
+
+fimalgoritmo

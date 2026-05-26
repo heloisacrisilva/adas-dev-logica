@@ -1,0 +1,29 @@
+algoritmo "ControlTreinoMensal"
+
+var
+  i: inteiro
+  kmPorDia, totalKm, mediaKm: real
+
+inicio
+  kmPorDia <- 0
+  totalKm <- 0
+  i <- 0
+
+  enquanto kmPorDia <> -1 faca
+    escreva("Informe quantos km correu no dia ", i + 1,": ")
+    leia(kmPorDia)
+    escreval(kmPorDia)
+    se (kmPorDia >= 0) entao
+      i <- i + 1
+      totalKm <- totalKm + kmPorDia
+    senao
+      escreval("Finalizando...")
+    fimse
+  fimenquanto
+  mediaKm <- totalKm / i
+
+  escreval()
+  escreval("Total de km percorridos: ", totalKm)
+  escreval("Quantos dias treinou: ", i)
+  escreval("Média de km percorridos por dia: ", mediaKm)
+fimalgoritmo

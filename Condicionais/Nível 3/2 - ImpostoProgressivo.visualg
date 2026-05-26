@@ -1,0 +1,38 @@
+algoritmo "ImpostoProgressivo"
+
+var
+
+  salarioAnual: real
+  imposto: real
+  faixa2, faixa3: inteiro
+
+inicio
+
+  faixa2 <- 20000
+  faixa3 <- 35000
+
+
+  escreva("Informe seu salário anual: R$")
+  leia(salarioAnual)
+  escreval(salarioAnual)
+  escreval()
+
+  se (salarioAnual >= 0) entao
+    se (salarioAnual <= 20000) entao
+      imposto <- 0
+    senao
+      se ((salarioAnual > 20000) e (salarioAnual <= 35000)) entao
+        imposto <- (salarioAnual - faixa2) * 0.10
+      senao
+        se (salarioAnual > 35000) entao
+          imposto <- 1500 + ((salarioAnual - faixa3) * 0.20)
+        fimse
+      fimse
+    fimse
+    escreval("Imposto: R$", imposto)
+  senao
+    escreval("Erro: valor negativo.")
+  fimse
+
+fimalgoritmo
+

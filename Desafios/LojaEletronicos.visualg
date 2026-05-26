@@ -1,0 +1,35 @@
+algoritmo "LojaEletronicos"
+
+var
+  nomeCliente: caracter
+  valorProduto, valorTotalCompra, valorDesconto, desconto: real
+  quantidade: inteiro
+
+inicio
+
+  escreva("Informe seu nome: ")
+  leia(nomeCliente)
+  escreval(nomeCliente)
+
+  escreva("Informe o valor do produto: ")
+  leia(valorProduto)
+  escreval(valorProduto)
+
+  escreva("Informe a quantidade desejada: ")
+  leia(quantidade)
+  escreval(quantidade)
+
+  valorTotalCompra <- valorProduto * quantidade
+
+  escreval()
+  escreval("Cliente ", nomeCliente, " comprou ", quantidade, " produtos.")
+  escreval("Total: R$", valorTotalCompra)
+  
+  se (valorTotalCompra >= 1000) entao
+  desconto <- valorTotalCompra / 10
+    valorDesconto <- valorTotalCompra - desconto
+    escreval("Desconto aplicado: R$", desconto, ". Valor final: R$ ", valorDesconto)
+  fimse
+
+
+fimalgoritmo

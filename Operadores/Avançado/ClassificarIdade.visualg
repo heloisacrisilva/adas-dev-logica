@@ -1,0 +1,29 @@
+algoritmo "ClassificarIdade"
+
+var
+  idade: inteiro
+  maioridade, senioridade: inteiro
+inicio
+
+  maioridade <- 18
+  senioridade <- 60
+
+  escreva("Insira a sua idade: ")
+  leia(idade)
+  escreval(idade)
+
+  se (idade < 18) entao
+    escreval()
+    escreva("Você é menor de idade.")
+  senao
+    se (idade >= 18) e (idade < senioridade) entao
+      escreval()
+      escreva("Você é adulto.")
+    fimse
+
+    se (idade >= senioridade) entao
+      escreval()
+      escreva("Você já é idoso.")
+    fimse
+  fimse
+fimalgoritmo

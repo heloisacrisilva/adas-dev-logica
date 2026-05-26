@@ -1,0 +1,21 @@
+algoritmo "PrimeiroValorEMaior"
+
+var
+  valor1, valor2: real
+  primeiroValorEMaior: logico
+
+inicio
+
+  escreva("Insira o primeiro valor: ")
+  leia(valor1)
+  escreval(valor1)
+
+  escreva("Insira o segundo valor: ")
+  leia(valor2)
+  escreval(valor2)
+
+  primeiroValorEMaior <- valor1 > valor2
+  escreval("O primeiro valor inserido é maior que o segundo? " + primeiroValorEMaior)
+
+
+fimalgoritmo

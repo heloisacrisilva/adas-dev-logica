@@ -1,0 +1,20 @@
+algoritmo "PodeVotar"
+
+var
+  idade: inteiro
+  idadeMinimaVotar: inteiro
+  podeVotar: logico
+
+inicio
+
+  idadeMinimaVotar <- 18
+
+  escreva("Insira sua idade: ")
+  leia(idade)
+  escreval(idade)
+
+  podeVotar <- idade >= idadeMinimaVotar
+
+  escreval("Está apta para votar? " + podeVotar)
+
+fimalgoritmo

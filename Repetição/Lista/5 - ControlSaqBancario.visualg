@@ -1,0 +1,31 @@
+algoritmo "ControlSaqBancario"
+
+var
+   saldo, valorSaque: real
+   i: inteiro
+inicio
+  escreva("Informe seu saldo atual: R$")
+  leia(saldo)
+  escreval(saldo)
+
+  i <- 0
+
+  enquanto saldo > 0 faca
+    escreva("Informe o valor de saque desejado: R$")
+    leia(valorSaque)
+    escreval(valorSaque)
+
+    se (valorSaque > saldo) entao
+    escreval("Saque não permitido, informe valor menor ou igual a R$", saldo)
+    escreval()
+    senao
+      saldo <- saldo - valorSaque
+      i <- i + 1
+    fimse
+  fimenquanto
+
+  escreval()
+  escreval("Quantidade de saques feitos: ", i)
+  escreval("Saldo atual: R$", saldo)
+  
+fimalgoritmo

@@ -1,0 +1,24 @@
+algoritmo "ParOuImpar"
+
+var
+  numero: inteiro
+  par: logico
+  resto: inteiro
+
+inicio
+
+  escreva("Digite um número: ")
+  leia(numero)
+  escreval(numero)
+
+
+  resto <- numero MOD 2
+  par <- resto = 0
+
+  se (par) entao
+    escreval(numero, " é um número par.")
+  senao
+    escreval(numero, " é um número ímpar.")
+  fimse
+
+fimalgoritmo

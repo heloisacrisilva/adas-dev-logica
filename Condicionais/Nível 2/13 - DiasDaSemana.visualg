@@ -1,0 +1,37 @@
+algoritmo "DiasDaSemana"
+
+var
+  diaSemana: inteiro
+
+inicio
+
+  escreval("---- Dias da semana ----")
+  escreva("Informe um número de 1 a 7 e te retornamos a qual dia da semana corresponde: ")
+  leia(diaSemana)
+  escreval(diaSemana)
+  escreval()
+
+  se ((diaSemana >= 1) e (diaSemana <= 7 )) entao
+
+    escolha diaSemana
+      caso 1
+        escreva("Domingo")
+      caso 2
+        escreva("Segunda")
+      caso 3
+        escreva("Terça")
+      caso 4
+        escreva("Quarta")
+      caso 5
+        escreva("Quinta")
+      caso 6
+        escreva("Sexta")
+      caso 7
+        escreva("Sábado")
+    fimescolha
+    escreval("-feira")
+  senao
+    escreval("Código inválido.")
+  fimse
+
+fimalgoritmo

@@ -1,0 +1,31 @@
+algoritmo "ContaDeAguaFaixas"
+
+var
+
+  consumo, valorFixo, total: inteiro
+  excedente: real
+
+inicio
+  valorFixo <- 35
+  excedente <- 4.5
+
+  escreva("Informe o consumo em m3: ")
+  leia(consumo)
+  escreval(consumo)
+  escreval()
+
+  se (consumo >= 0) entao
+
+    se (consumo <= 10) entao
+      total <- valorFixo
+    senao
+      total <- valorFixo + ((consumo - 10) * excedente)
+    fimse
+
+    escreval("Valor: R$", total)
+
+  senao
+    escreval("Entrada inválida.")
+  fimse
+
+fimalgoritmo

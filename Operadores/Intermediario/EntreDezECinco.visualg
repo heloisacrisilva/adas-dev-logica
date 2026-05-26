@@ -1,0 +1,21 @@
+algoritmo "EntreDezECinco"
+
+var
+  numero: real
+  minimo, maximo: inteiro
+  valido: logico
+
+inicio
+
+  minimo <- 10
+  maximo <- 50
+
+  escreva("Insira um número: ")
+  leia(numero)
+  escreval(numero)
+
+  valido <- (numero >= minimo) e (numero <= maximo)
+
+  escreval("O numero inserido está entre ", minimo, " e ", maximo, "? " + valido)
+
+fimalgoritmo

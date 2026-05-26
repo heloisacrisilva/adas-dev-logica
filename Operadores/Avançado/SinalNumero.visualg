@@ -1,0 +1,25 @@
+algoritmo "SinalNumero"
+
+var
+  numero: real
+inicio
+
+
+  escreva("Insira um número: ")
+  leia(numero)
+  escreval(numero)
+  
+  se (numero < 0) entao
+    escreval()
+    escreva("Número negativo.")
+  senao
+    se (numero > 0)entao
+      escreval()
+      escreva("Número positivo.")
+    senao
+      escreval()
+      escreval("É o próprio zero.")
+    fimse
+  fimse
+
+fimalgoritmo

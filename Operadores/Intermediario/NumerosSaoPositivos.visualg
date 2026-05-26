@@ -1,0 +1,21 @@
+algoritmo "NumerosSaoPositivos"
+
+var
+  numero1, numero2: real
+  saoPositivos: logico
+
+inicio
+
+  escreva("Digite o primeiro número: ")
+  leia(numero1)
+  escreval(numero1)
+
+  escreva("Digite o segundo número: ")
+  leia(numero2)
+  escreval(numero2)
+
+  saoPositivos <- numero1 e numero2 >= 0
+
+  escreval("Ambos os números são positivos? " + saoPositivos)
+
+fimalgoritmo

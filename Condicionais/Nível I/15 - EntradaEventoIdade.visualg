@@ -1,0 +1,26 @@
+algoritmo "EntradaEventoIdade"
+
+var
+  idade: inteiro
+  maioridade: logico
+
+inicio
+
+  escreva("Informa sua idade: ")
+  leia(idade)
+  escreval(idade)
+  escreval()
+
+  maioridade <- idade >= 18
+
+  se (idade < 0) entao
+    escreval("Idade inválida")
+  senao
+    se (maioridade) entao
+      escreval("Entrada permitida")
+    senao
+      escreval("Entrada não permitida")
+    fimse
+  fimse
+
+fimalgoritmo

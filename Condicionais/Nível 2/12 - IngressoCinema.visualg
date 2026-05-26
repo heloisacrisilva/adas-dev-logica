@@ -1,0 +1,31 @@
+algoritmo "IngressoCinema"
+
+var
+
+  idade, valor: inteiro
+  cartEstudante: inteiro
+  tipoIngresso: caracter
+
+inicio
+
+  escreva("Informe sua idade: ")
+  leia(idade)
+  escreval(idade)
+
+  escreval("---- Possui carteira estudantil? ----")
+  escreval("[1] - Sim")
+  escreval("[2] - Não")
+  leia(cartEstudante)
+  escreval()
+
+  se ((idade < 12) ou (cartEstudante = 1)) entao
+    valor <- 20
+    tipoIngresso <- "Meia"
+  senao
+    valor <- 40
+    tipoIngresso <- "Inteira"
+  fimse
+
+  escreval(tipoIngresso," - R$", valor)
+
+fimalgoritmo

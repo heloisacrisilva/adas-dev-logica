@@ -1,0 +1,27 @@
+algoritmo "DescontoPorcentagem"
+
+var
+  preco, porcentagem, precoFinal, porcentagem, desconto: real
+
+inicio
+
+  escreva("Digite o preço do produto: ")
+  leia(preco)
+  escreval(preco)
+
+  escreva("Digite a porcentagem de desconto que será aplicada: ")
+  leia(porcentagem)
+  escreval(porcentagem)
+  escreval()
+
+  desconto <- porcentagem / 100
+  precoFinal <- preco - (preco * desconto)
+
+  se ((porcentagem < 0) ou (porcentagem > 100)) entao
+    escreval("Desconto inválido.")
+  senao
+    escreval("Preço final: R$", precoFinal)
+  fimse
+
+
+fimalgoritmo

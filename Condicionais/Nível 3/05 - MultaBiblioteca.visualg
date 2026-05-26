@@ -1,0 +1,33 @@
+algoritmo "MultaBiblioteca"
+
+var
+  diasAtraso, totalMulta, diasExcedidos: inteiro
+
+inicio
+  escreva("informe os dias atrasados: ")
+  leia(diasAtraso)
+  escreval(diasAtraso)
+  escreval()
+
+  totalMulta <- 0
+
+  se (diasAtraso >= 0) entao
+    se ((diasAtraso >0) e (diasAtraso <= 3)) entao
+      totalMulta <- diasAtraso * 1
+    senao
+      se ((diasAtraso >= 4) e (diasAtraso <= 10)) entao
+        diasExcedidos <- diasAtraso - 3
+        totalMulta <- 3 + (diasExcedidos * 2)
+      senao
+        se (diasAtraso > 10) entao
+          diasExcedidos <- diasAtraso - 10
+          totalMulta <- 3 + (7 * 2) + (diasExcedidos * 3 )
+        fimse
+      fimse
+    fimse
+    escreval("Total a pagar: R$", totalMulta)
+  senao
+    escreval("Entrada inválida.")
+  fimse
+
+fimalgoritmo

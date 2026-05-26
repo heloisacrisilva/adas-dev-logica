@@ -1,0 +1,44 @@
+algoritmo "MediaTresNotas"
+
+var
+  nota1, nota2, nota3, media, recuperacao, novaMedia: real
+
+inicio
+
+  escreva("Informe a primeira nota: ")
+  leia(nota1)
+  escreval(nota1)
+
+  escreva("Informe a segunda nota: ")
+  leia(nota2)
+  escreval(nota2)
+
+  escreva("Informe a terceira nota: ")
+  leia(nota3)
+  escreval(nota3)
+  escreval()
+
+  media <- (nota1 + nota2 + nota3) / 3
+
+  se (media >= 7) entao
+    escreval("Aluno aprovado! Média: ", media)
+  senao
+    se (media >= 5) entao
+      escreval("Média: ", media)
+      escreva("Insira a nota da recuperação: ")
+      leia(recuperacao)
+      escreval(recuperacao)
+
+      novaMedia <-  (media + recuperacao) / 2
+      se (novaMedia >= 5) entao
+        escreval("Aluno aprovado na recuperação! Média: ", novaMedia)
+      senao
+        escreval("Aluno reprovado na recuperação. Média: ", novaMedia)
+      fimse
+    fimse
+    se (media < 5) entao
+      escreval("Aluno reprovado. Média: ", media)
+    fimse
+  fimse
+
+fimalgoritmo

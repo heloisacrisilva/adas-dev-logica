@@ -1,0 +1,32 @@
+algoritmo "FestaVerificacaoIdade"
+
+var
+  idade: inteiro
+  acompanhado: logico
+
+inicio
+  escreva("Informe a sua idade: ")
+  leia(idade)
+  escreval(idade)
+
+  se (idade < 18) entao
+    escreva("Você irá acompanhado de um adulto (verdadeiro ou falso)? ")
+    leia(acompanhado)
+    escreval(acompanhado)
+    se (acompanhado) entao
+      escreval()
+      escreval("Entrada permitida com acompanhante!")
+    senao
+      escreval("Entrada proibida! Apenas maiores de idade ou acompanhados")
+    fimse
+  senao
+    escreval()
+    escreval("Entrada permitida!")
+  fimse
+
+
+
+
+
+
+fimalgoritmo

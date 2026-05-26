@@ -1,0 +1,37 @@
+algoritmo "SistemaLogin"
+
+var
+
+  usuario, senha: caracter
+  usuarioDig, senhaDig: caracter
+  valido: logico
+  contador: inteiro
+
+inicio
+
+  usuario <- "admin"
+  senha <- "1234"
+
+  contador <- 0
+
+  enquanto (usuarioDig <> usuario) ou (senhaDig <> senha) e (contador < 3) faca
+    escreva("Informe o usuário: ")
+    leia(usuarioDig)
+    escreval(usuarioDig)
+
+    escreva("Informe a senha: ")
+    leia(senhaDig)
+    escreval(senhaDig)
+
+    limpatela
+    contador <- contador + 1
+
+  fimenquanto
+
+  se (usuarioDig = usuario) e (senhaDig = senha) entao
+    escreval("Acesso permitido!")
+  senao
+    escreval("Acesso bloqueado.")
+  fimse
+
+fimalgoritmo

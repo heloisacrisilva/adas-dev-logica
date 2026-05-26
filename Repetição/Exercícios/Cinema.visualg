@@ -1,0 +1,56 @@
+algoritmo "Cinema"
+
+var
+  idade: inteiro
+  tipoIngresso: inteiro
+  diaDaSemana: inteiro
+  valorIngresso: real
+
+inicio
+
+  escreva("Informe sua idade: ")
+  leia(idade)
+
+  escreval("**** Escolha o tipo de ingresso ****")
+  escreval("[1] - Inteira")
+  escreval("[2] - Meia")
+  escreval("[3] - VIP")
+  leia(tipoIngresso)
+
+  escreval("**** Qual dia da semana? ****")
+  escreval("[1] - Segunda")
+  escreval("[2] - Terça")
+  escreval("[3] - Quarta")
+  escreval("[4] - Quinta")
+  escreval("[5] - Sexta")
+  escreval("[6] - Sábado")
+  escreval("[7] - Domingo")
+  leia(diaDaSemana)
+
+  se (tipoIngresso = 3) entao
+    valorIngresso <- 50
+  senao
+    se (idade < 12) entao
+      valorIngresso <- 10
+    senao
+      se (diaDaSemana = 3) entao
+        valorIngresso <- 15
+
+      senao
+        escolha(tipoIngresso)
+          caso 1
+            valorIngresso <- 30
+          caso 2
+            valorIngresso <- 15
+          outrocaso
+            escreval("Opção inválida.")
+            valorIngresso <- 0
+        fimescolha
+      fimse
+    fimse
+  fimse
+
+  escreval()
+  escreval("Valor do ingresso: R$", valorIngresso)
+
+fimalgoritmo

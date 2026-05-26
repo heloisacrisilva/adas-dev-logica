@@ -1,0 +1,29 @@
+algoritmo "AcademiaFitLife"
+
+var
+  nomeAluno: caracter
+  peso, altura: real
+  imc: real
+
+inicio
+
+  escreva("Informe seu nome: ")
+  leia(nomeAluno)
+  escreval(nomeAluno)
+
+  escreva("Informe sua altura(m): ")
+  leia(altura)
+  escreval(altura)
+
+  escreva("Informe seu peso(kg): ")
+  leia(peso)
+  escreval(peso)
+
+  imc <- peso / (altura * altura)
+
+
+  escreval()
+  escreval("Aluno(a) ", nomeAluno, ", possui IMC de: ", imc)
+
+
+fimalgoritmo

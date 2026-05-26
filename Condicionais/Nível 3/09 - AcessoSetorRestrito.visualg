@@ -1,0 +1,42 @@
+algoritmo "AcessoSetorRestrito"
+
+var
+  gerente, crachaValid: inteiro
+  hora: inteiro
+  acessoPermitido: logico
+inicio
+
+  escreval("****** Acesso restrito ******")
+  escreval()
+  escreval("Você é gerente?")
+  escreval("[1] - Sim")
+  escreval("[2] - Não")
+  leia(gerente)
+
+  escreval()
+  escreval("Seu crachá está válido?")
+  escreval("[1] - Sim")
+  escreval("[2] - Não")
+  leia(crachaValid)
+
+  limpatela
+
+  escreva("Informe a hora de entrada: ")
+  leia(hora)
+  escreval(hora,"h")
+
+  se (crachaValid = 1) entao
+    se (gerente = 1) entao
+      escreval("Acesso permitido!")
+    senao
+      se ((hora >= 8) e (hora <= 17)) entao
+        escreval("Acesso permitido!")
+      senao
+        escreval("Acesso negado. Você não é gerente e está fora do horário comercial.")
+      fimse
+    fimse
+  senao
+    escreval("Acesso negado. Crachá inválido")
+  fimse
+
+fimalgoritmo

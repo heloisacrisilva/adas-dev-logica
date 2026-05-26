@@ -1,0 +1,36 @@
+algoritmo "AprovacaoLimiteFaltas"
+
+var
+  aulasLecionadas, numFaltas, minFrequencia, mediaMin: inteiro
+  media: real
+inicio
+
+  escreva("informe a quantidade de aulas lecionadas: ")
+  leia(aulasLecionadas)
+  escreval(aulasLecionadas, " aulas")
+
+
+  escreva("informe a quantidade de faltas nas aulas: ")
+  leia(numFaltas)
+  escreval(numFaltas, " faltas")
+
+  escreva("informe sua média: ")
+  leia(media)
+  escreval(media)
+  escreval()
+
+  minFrequencia <- aulasLecionadas * 0.25
+  mediaMin <- 7
+
+  se (numFaltas > minFrequencia) entao
+    escreval("Reprovado por falta.")
+  senao
+    se (media >= mediaMin) entao
+      escreval("Aprovado!")
+    senao
+      escreval("Reprovado por nota.")
+    fimse
+
+  fimse
+
+fimalgoritmo

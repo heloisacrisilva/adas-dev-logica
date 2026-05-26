@@ -1,0 +1,59 @@
+algoritmo "MesesDoAno"
+
+var
+  num1, num2, resto: real
+  operacao: inteiro
+  resultado: real
+  ePar: logico
+
+inicio
+
+  escreva("Digite o primeiro número: ")
+  leia(num1)
+  escreval(num1)
+
+  escreva("Digite o segundo número: ")
+  leia(num2)
+  escreval(num2)
+
+  escreval()
+  escreval("**** Escolha a operação matemática ****")
+  escreval("[1] - Soma")
+  escreval("[2] - Subtração")
+  escreval("[3] - Multiplicação")
+  escreval("[4] - Divisão")
+  leia(operacao)
+
+
+  se (operacao >= 1 ) e (operacao <= 4) entao
+
+    escolha(operacao)
+      caso 1
+        resultado <- num1 + num2
+      caso 2
+        resultado <- num1 - num2
+      caso 3
+        resultado <- num1 * num2
+      caso 4
+        resultado <- num1 / num2
+    fimescolha
+
+    escreval()
+    escreval("Resultado da operação é: ", resultado)
+
+    resto <- resultado MOD 2
+    ePar <- resto = 0
+
+    se (ePar) entao
+      escreval("Resultado é par")
+    senao
+      escreval(resultado, " é ímpar.")
+    fimse
+
+  senao
+    escreval()
+    escreval("Operação inválida.")
+  fimse
+
+
+fimalgoritmo

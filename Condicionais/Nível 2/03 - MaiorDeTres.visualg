@@ -1,0 +1,44 @@
+algoritmo "MaiorDeTres"
+
+var
+  num1, num2, num3, numeroMaior: inteiro
+  empate: logico
+
+inicio
+  escreva("Insira o primeiro número: ")
+  leia(num1)
+  escreval(num1)
+
+  escreva("Insira o segundo número: ")
+  leia(num2)
+  escreval(num2)
+
+  escreva("Insira o terceiro número: ")
+  leia(num3)
+  escreval(num3)
+  escreval()
+
+  se ((num1 > (num2 e num3))) entao
+    numeroMaior <- num1
+  senao
+    se ((num2 > (num1 e num3))) entao
+      numeroMaior <- num2
+    senao
+      se ((num3 > (num2 e num1))) entao
+        numeroMaior <- num3
+      fimse
+    fimse
+  fimse
+
+  se (num1 = num2 e num2 = num3) entao
+    escreval("Todos os números são iguais")
+  senao
+    se ((num1 = num2 e num1 >= num3) ou (num1 = num3 e num1 >= num2) ou (num2 = num3 e num2 >= num1)) entao
+      escreval("Empate: o maior valor é ", numeroMaior)
+    senao
+      escreval("O maior número é o ", numeroMaior)
+    fimse
+  fimse
+
+
+fimalgoritmo

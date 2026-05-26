@@ -1,0 +1,22 @@
+algoritmo "PodeDirigir"
+
+var
+  anoNascimento, anoAtual, idadeMinima: inteiro
+inicio
+  anoAtual <- 2026
+  idadeMinima <- 18
+
+  escreva("Insira o ano que você nasceu: ")
+  leia(anoNascimento)
+  escreval(anoNascimento)
+
+  se ((anoAtual - anoNascimento) >= idadeMinima ) entao
+    escreval()
+    escreva("Eba! Já pode dirigir.")
+  senao
+    escreval()
+    escreva("Que pena! Ainda não atingiu a idade mínima: ", idadeMinima)
+  fimse
+
+
+fimalgoritmo

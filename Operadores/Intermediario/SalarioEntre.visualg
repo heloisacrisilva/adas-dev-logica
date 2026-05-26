@@ -1,0 +1,21 @@
+algoritmo "SalarioEntre"
+
+var
+  salario: real
+  minimo, maximo: inteiro
+  verificacao: logico
+
+inicio
+
+  minimo <- 2000
+  maximo <- 5000
+
+  escreva("Insira seu salário: ")
+  leia(salario)
+  escreval(salario)
+
+  verificacao <- (salario >= minimo) e (salario <= maximo)
+
+  escreval("O salário está entre R$2.000,00 e R$ 5.000,00? ", verificacao)
+
+fimalgoritmo

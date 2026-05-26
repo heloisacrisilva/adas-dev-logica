@@ -1,0 +1,34 @@
+algoritmo "PlanoCelular"
+
+var
+  minutos, minExcedidos, minInclusos: inteiro
+  valorFixo, minExtra: real
+  valorTotal: real
+
+inicio
+  valorFixo <- 50
+  minExtra <- 0.8
+  minInclusos <- 100
+
+  escreva("Informe quantos minutos foram usados: ")
+  leia(minutos)
+  escreval(minutos)
+  escreval()
+
+  se (minutos >= 0) entao
+    se (minutos <= minInclusos) entao
+      valorTotal <- valorFixo
+    senao
+      se (minutos > minInclusos) entao
+      minExcedidos <- minutos - minInclusos
+      valorTotal <- valorFixo + (minExcedidos * minExtra)
+      fimse
+    fimse
+    escreval("Valor total para ", minutos, "min usados: R$", valorTotal)
+  senao
+    escreval("Entrada inválida.")
+  fimse
+
+  escreval()
+
+fimalgoritmo

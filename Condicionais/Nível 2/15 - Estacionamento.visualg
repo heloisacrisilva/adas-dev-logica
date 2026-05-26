@@ -1,0 +1,29 @@
+algoritmo "Estacionamento"
+
+var
+
+  horasEstacionadas: inteiro
+  custoHora, horaAdicional, total: real
+
+inicio
+
+  custoHora <- 6
+  horaAdicional <- 4
+
+  escreva("Informe a quantidade de horas estacionadas: ")
+  leia(horasEstacionadas)
+  escreval(horasEstacionadas)
+  escreval()
+
+  se (horasEstacionadas >=0) entao
+    se (horasEstacionadas = 0) entao
+      total <- 0
+    senao
+      total <- custoHora + (horaAdicional * (horasEstacionadas - 1))
+    fimse
+    escreval("Total: R$", total)
+  senao
+    escreval("Entrada inválida.")
+  fimse
+
+fimalgoritmo

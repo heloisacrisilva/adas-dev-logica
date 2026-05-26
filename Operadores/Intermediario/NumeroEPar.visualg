@@ -1,0 +1,19 @@
+algoritmo "NumeroEPar"
+
+var
+  numero: real
+  resto: real
+  numeroEPar: logico
+
+inicio
+
+  escreva("Insira um número: ")
+  leia(numero)
+  escreval(numero)
+
+  resto <- numero MOD 2
+  numeroEPar <- resto = 0
+
+  escreval("O numero inserido é par? ", numeroEPar)
+
+fimalgoritmo

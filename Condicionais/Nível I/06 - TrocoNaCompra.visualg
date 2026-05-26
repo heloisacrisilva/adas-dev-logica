@@ -1,0 +1,29 @@
+algoritmo "TrocoNaCompra"
+
+var
+  preco, valorPago, troco: real
+
+inicio
+
+  escreva("Digite o preço do produto: ")
+  leia(preco)
+  escreval(preco)
+
+  escreva("Insira o valor pago: ")
+  leia(valorPago)
+  escreval(valorPago)
+  escreval()
+
+
+  se ((valorPago > preco) ou (valorPago = preco)) entao
+    troco <- valorPago - preco
+    escreval("Troco: R$", troco)
+  senao
+    escreval("Pagamento insuficiente")
+    escreval("Preço produto: R$", preco)
+    escreval("Valor pago: R$", valorPago)
+
+  fimse
+
+
+fimalgoritmo

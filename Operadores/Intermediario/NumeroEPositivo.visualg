@@ -1,0 +1,17 @@
+algoritmo "NumeroEPositivo"
+
+var
+  numero: real
+  positivo: logico
+
+inicio
+
+  escreva("Insira um número: ")
+  leia(numero)
+  escreval(numero)
+
+  positivo <- numero >= 0
+
+  escreval("O numero inserido é positivo? ", positivo)
+
+fimalgoritmo

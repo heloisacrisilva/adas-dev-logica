@@ -1,0 +1,23 @@
+algoritmo "MultiploDe3"
+
+var
+  numero, resto: inteiro
+  multiplo3: logico
+
+inicio
+
+  escreva("Digite um número inteiro: ")
+  leia(numero)
+  escreval(numero)
+  escreval()
+
+  resto <- numero MOD 3
+  multiplo3 <- resto = 0
+
+  se (multiplo3) entao
+    escreval("É múltiplo de 3")
+  senao
+    escreval("Não é múltiplo de 3")
+  fimse
+
+fimalgoritmo

@@ -1,0 +1,30 @@
+algoritmo "Triangulo"
+
+var
+  lado1, lado2, lado3: real
+  eTriangulo: logico
+
+inicio
+
+  escreva("Digite o tamanho do lado 01 do triângulo: ")
+  leia(lado1)
+  escreval(lado1)
+
+  escreva("Digite o tamanho do lado 02 do triângulo: ")
+  leia(lado2)
+  escreval(lado2)
+
+  escreva("Digite o tamanho do lado 03 do triângulo: ")
+  leia(lado3)
+  escreval(lado3)
+
+  eTriangulo <- (lado1 = lado2) e (lado2 = lado3)
+
+  se (eTriangulo = verdadeiro) entao
+    escreval()
+    escreval("Os três lados formam um triângulo!")
+  senao
+    escreval()
+    escreval("Os três lados não formam um triângulo...")
+  fimse
+fimalgoritmo

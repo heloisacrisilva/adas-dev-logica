@@ -1,0 +1,28 @@
+algoritmo "EquacaoPrimeiroGrau"
+
+var
+  a, b, resultado: real
+
+inicio
+  escreva("Insira a entrada desejada para variável a: ")
+  leia(a)
+  escreval(a)
+
+  escreva("Insira a entrada desejada para variável b: ")
+  leia(b)
+  escreval(b)
+  escreval()
+
+  se ((a = 0) e (b = 0)) entao
+    escreval("Infinitas soluções")
+  senao
+    se ((a = 0) e (b <> 0)) entao
+      escreval("Sem solução")
+    senao
+      resultado <- -b/a
+      escreval("Resultado da equação é: ", resultado)
+
+    fimse
+
+  fimse
+fimalgoritmo

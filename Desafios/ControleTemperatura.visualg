@@ -1,0 +1,33 @@
+algoritmo "ControleTemperatura"
+
+var
+  nomeResponsavel, clima: caracter
+  temperaturaAtual: real
+
+inicio
+
+  escreva("Informe seu nome: ")
+  leia(nomeResponsavel)
+  escreval(nomeResponsavel)
+
+  escreva("Insira a temperatura atual: ")
+  leia(temperaturaAtual)
+  escreval(temperaturaAtual)
+
+  escreval()
+
+  se (temperaturaAtual < 18) entao
+    clima <- "frio"
+  fimse
+
+  se ((temperaturaAtual > 17) e (temperaturaAtual < 26)) entao
+    clima <- "ideal"
+  fimse
+
+    se (temperaturaAtual > 25) entao
+    clima <- "quente"
+  fimse
+
+  escreval("Responsável " nomeResponsavel,": Temperatura de ", temperaturaAtual, "°C está clissificada como: ", clima)
+
+fimalgoritmo

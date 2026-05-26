@@ -1,0 +1,29 @@
+algoritmo "ControleCompras"
+
+var
+  valorProduto, total: real
+  ultrapassouLimit: logico
+  quantItens: inteiro
+
+inicio
+
+  total <- 0
+
+  enquanto total < 200 faca
+    escreva("Informe o valor do produto: R$")
+    leia(valorProduto)
+    escreval(valorProduto)
+    total <- total + valorProduto
+    quantItens <- quantItens + 1
+
+    se (total > 200) entao
+      ultrapassouLimit <- verdadeiro
+    fimse
+  fimenquanto
+
+  escreval()
+  escreval("Valor total da compra: R$", total)
+  escreval("Quantidade de itens: ", quantItens)
+  escreval("Ultrapassou o limite? ", ultrapassouLimit)
+
+fimalgoritmo

@@ -1,0 +1,21 @@
+algoritmo "PesoEAltura"
+
+var
+  altura, peso: real
+  verificacao: logico
+
+inicio
+
+  escreva("Insira seu peso(kg): ")
+  leia(peso)
+  escreval(peso)
+
+  escreva("Insira sua altura(cm): ")
+  leia(altura)
+  escreval(altura)
+
+  verificacao <- (peso > 80) e (altura > 170)
+
+  escreval("Está acima de 80kg e tem mais que 170 de altura? ", verificacao)
+
+fimalgoritmo
